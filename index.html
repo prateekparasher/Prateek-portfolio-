@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    
     <!-- Add this button in your header/navigation -->
     <button id="theme-toggle" class="fixed top-4 right-4 p-2 rounded-full glass-card hover-scale">
         <svg id="theme-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,7 +97,7 @@
         }
 
         .floating {
-            animation: float 6s ease-in-out infinite;
+            animation: float 4s ease-in-out infinite;
         }
 
         @keyframes float {
@@ -140,11 +140,68 @@
             transform: translateY(-5px);
         }
         
+
+
+         #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensures it appears behind your content */
+            background-color: #000000; /* Adjust this to fit your theme */
+        }
+
     </style>
+
+
+    <style>
+            /* Footer styling */
+            .footer {
+                background-color: #111;
+                color: #fff;
+                text-align: center;
+                padding: 20px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                z-index: 2;
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            }
+
+            .footer .social-links {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .footer .social-links a {
+                color: #fff;
+                font-size: 1.5rem;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .footer .social-links a:hover {
+                color: #0b99e6; /* Default LinkedIn color */
+            }
+
+            .footer .social-links a.github:hover {
+                color: #333; /* GitHub black */
+            }
+
+            .footer .social-links a.credly:hover {
+                color: #FF6A00; /* Credly orange */
+            }
+    </style>
+
 </head>
 <body>
     <!-- Animated Background -->
     <canvas class="particles-canvas" id="particles"></canvas>
+    <div id="particles-js"></div>
+    
+
     
     <!-- Main Container -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -153,7 +210,7 @@
             <div class="text-center">
                 <div class="relative inline-block mb-8">
                     <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-3xl opacity-30"></div>
-                   <img src="profile.jpg" 
+                   <img src="images/profile.jpg" 
                         alt="Prateek Parasher"
                         class="floating w-48 h-48 rounded-full border-4 border-white/10 relative z-10"
                         loading="lazy">
@@ -182,7 +239,7 @@
                 <!-- AWS Card -->
                 <div class="glass-card p-8 hover-scale">
                     <div class="flex items-center gap-6 mb-4">
-                        <img src="aws-certified.png" alt="AWS" class="w-20">
+                        <img src="images/aws-certified.png" alt="AWS" class="w-20">
                         <div>
                             <h3 class="text-2xl font-bold">AWS Solutions Architect</h3>
                             <p class="text-gray-400">Professional Level</p>
@@ -197,7 +254,7 @@
                 <!-- Cisco Card -->
                 <div class="glass-card p-8 hover-scale">
                     <div class="flex items-center gap-6 mb-4">
-                        <img src="cisco-ccnp.png" alt="Cisco" class="w-20">
+                        <img src="images/cisco-ccnp.png" alt="Cisco" class="w-20">
                         <div>
                             <h3 class="text-2xl font-bold">Cisco CCNA</h3>
                             <p class="text-gray-400">Cisco Certified Network Associate</p>
@@ -211,28 +268,13 @@
             </div>
         </section>
 
-                    <!-- Example modified certification card -->
-            <div class="glass-card p-8 hover-scale">
-                <div class="flex items-center gap-6 mb-4">
-                    <img src="aws-certified.png" alt="AWS" class="w-20">
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-200">AWS Solutions Architect</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Professional Level</p>
-                    </div>
-                </div>
-                <div class="skill-bar mb-4">
-                    <div class="skill-progress" style="width: 90%"></div>
-                </div>
-                <p class="text-gray-700 dark:text-gray-300">Valid through: 2029</p>
-            </div>
-
          <!-- Education Section -->
         <section class="my-24" id="education">
             <h2 class="text-4xl font-bold mb-12 gradient-text text-center">Education</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- University 1 -->
                 <div class="glass-card p-8 hover-scale flex items-center gap-4">
-                    <img src="atu-logo.png" alt="Atlantic Technological University" class="w-20">
+                    <img src="images/atu-logo.png" alt="Atlantic Technological University" class="w-20">
                     <div>
                         <h3 class="text-2xl font-bold">Atlantic Technological University</h3>
                         <p class="text-gray-400">2017 – 2019</p>
@@ -242,7 +284,7 @@
                 </div>
                 <!-- University 2 -->
                 <div class="glass-card p-8 hover-scale flex items-center gap-4">
-                    <img src="lancaster-logo.png" alt="Lancaster University" class="w-20">
+                    <img src="images/lancaster-logo.png" alt="Lancaster University" class="w-20">
                     <div>
                         <h3 class="text-2xl font-bold">Lancaster University</h3>
                         <p class="text-gray-400">2014 – 2015</p>
@@ -251,7 +293,7 @@
                 </div>
                 <!-- University 3 -->
                 <div class="glass-card p-8 hover-scale flex items-center gap-4">
-                    <img src="lancaster-logo.png" alt="Lancaster University" class="w-20">
+                    <img src="images/lancaster-logo.png" alt="Lancaster University" class="w-20">
                     <div>
                         <h3 class="text-2xl font-bold">Lancaster University</h3>
                         <p class="text-gray-400">2011 – 2014</p>
@@ -328,23 +370,38 @@
         </section>
     </div>
                                    <!-- Company Logos Section -->
-        <section class="my-24" id="company-logos">
-            <h2 class="text-4xl font-bold mb-12 gradient-text text-center">Companies I Worked With</h2>
-            <div class="flex justify-center gap-8">
-                <img src="convergint-logo.png" alt="Convergint" class="w-24 hover-scale">
-                <img src="zepter-logo.png" alt="Zepter" class="w-24 hover-scale">
-                <img src="aws-certified.png" alt="AWS" class="w-24 hover-scale">
-                <img src="cisco-ccnp.png" alt="Cisco" class="w-24 hover-scale">
-            </div>
-        </section>
-    
+                                <section class="my-24" id="company-logos">
+                                    <h2 class="text-4xl font-bold mb-12 gradient-text text-center">Virtual Work Experiences: Programs simulate real-world work tasks</h2>
+                                    <div class="flex justify-center gap-8">
+                                        <!-- Mastercard -->
+                                        <a href="https://link-to-mastercard-certificate.com" target="_blank" rel="noopener noreferrer">
+                                            <img src="images/mastercard-logo.png" alt="Mastercard" class="w-28 hover-scale">
+                                        </a>
+                                        <!-- Deloitte -->
+                                        <a href="https://link-to-deloitte-certificate.com" target="_blank" rel="noopener noreferrer">
+                                            <img src="images/Deloitte-logo.png" alt="Deloitte" class="w-40 hover-scale">
+                                        </a>
+                                        <!-- AWS -->
+                                        <a href="https://bit.ly/3EdeVUh" target="_blank" rel="noopener noreferrer">
+                                            <img src="images/aws-certified.png" alt="AWS" class="w-24 hover-scale">
+                                        </a>
+                                        <!-- PWC -->
+                                        <a href="https://link-to-pwc-certificate.com" target="_blank" rel="noopener noreferrer">
+                                            <img src="images/PWC-logo.png" alt="PWC" class="w-40 hover-scale">
+                                        </a>
+                                        <!-- Tata -->
+                                        <a href="https://link-to-tata-certificate.com" target="_blank" rel="noopener noreferrer">
+                                            <img src="images/tata-logo.png" alt="Tata" class="w-24 hover-scale">
+                                        </a>
+                                    </div>
+                                </section>
 
     <!-- Particles Animation Script -->
     <script>
         // Initialize Three.js particles background
         const canvas = document.getElementById('particles');
         const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+        const camera = new THREE.PerspectiveCamera(125, window.innerWidth/window.innerHeight, 0.1, 100);
         const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
 
         // Configure particles
@@ -375,6 +432,66 @@
 
         animate();
     </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 6 }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "repulse": { "distance": 200, "duration": 0.4 },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Footer with Social Media Links</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+           
+        </head>
+        <body>
+
+            <!-- Footer Section -->
+            <footer class="footer">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/your-username" target="_blank" aria-label="GitHub" class="github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.credly.com/users/your-credly-profile" target="_blank" aria-label="Credly" class="credly">
+                        <i class="fas fa-certificate"></i>
+                    </a>
+                </div>
+                <p>&copy; 2025 Prateek Parasher. All Rights Reserved.</p>
+            </footer>
+
+        </body>
+        </html>
+
+
+
+
 </body>
 
 </html>
